@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 :root {
-    --blue: #00b8b8;
-    --black: #333;
+    --light-green: #7D8F69;
+    --dark-green: #557153;
     --white: #fff;
     --light-color: #666;
     --light-bg: #eee;
@@ -31,7 +31,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: var(--blue);
+    background-color: var(--light-green);
 }
 
 html {
@@ -41,27 +41,22 @@ html {
     scroll-padding-top: 6.5rem;
 }
 
-.heading {
-    text-align: center;
-    font-size: 4rem;
-    color: var(--black);
-    text-transform: uppercase;
-    font-weight: bolder;
-    margin-bottom: 3rem;
+section {
+    padding: 7rem 2rem;
 }
 
 .link-btn {
     display: inline-block;
     padding: 1rem 3rem;
     border-radius: .5rem;
-    background-color: var(--blue);
+    background-color: var(--light-green);
     cursor: pointer;
     font-size: 1.7rem;
     color: var(--white);
 }
 
 .link-btn:hover {
-    background-color: var(--black);
+    background-color: var(--dark-green);
     color: var(--white);
 }
 
@@ -78,30 +73,53 @@ html {
 
 .header .logo {
     font-size: 2rem;
-    color: var(--black);
+    color: var(--dark-green);
 }
 
 .header .logo span {
-    color: var(--blue);
+    color: var(--light-green);
 }
 
 .header .nav a {
     margin: 0 1rem;
     font-size: 1.7rem;
-    color: var(--black);
+    color: var(--dark-green);
 }
 
 .header .nav a:hover {
-    color: var(--blue);
+    color: var(--light-green);
 }
 
 #menu-btn {
     font-size: 2.5rem;
-    color: var(--black);
+    color: var(--dark-green);
     cursor: pointer;
     display: none;
 }
 
+.home {
+    background: url(../images/home-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content {
+    width: 55rem;
+    padding: 2rem;
+}
+
+.home .content h3 {
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: var(--dark-green);
+}
+
+.home .content p {
+    line-height: 2;
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
 
 
 
@@ -127,9 +145,17 @@ html {
     .header .link-btn {
         display: none;
     }
+
+    section {
+        padding: 5rem 2rem;
+    }
 }
 
 @media (max-width:768px) {
+
+    section {
+        padding: 3rem 1rem;
+    }
 
     #menu-btn {
         display: inline-block;
@@ -163,11 +189,23 @@ html {
         margin: 1rem 0;
         font-size: 2rem;
     }
+
+    .home {
+        background-position: left;
+    }
+
+    .home .content {
+        width: auto;
+    }
 }
 
 @media (max-width:450px) {
 
     html {
         font-size: 50%;
+    }
+
+    .home .content h3 {
+        font-size: 4rem;
     }
 }
