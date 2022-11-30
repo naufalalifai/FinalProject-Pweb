@@ -98,7 +98,7 @@ section {
 }
 
 .home {
-    background: url(../images/home-bg.jpg) no-repeat;
+    background: url(images/home-bg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -120,6 +120,33 @@ section {
     color: var(--light-color);
     padding: 1rem 0;
 }
+
+.about .row {
+    min-height: 50vh;
+}
+
+.about .content span {
+    font-size: 2rem;
+    color: var(--light-green);
+}
+
+.about .content h3 {
+    font-size: 3rem;
+    color: var(--dark-green);
+    margin-top: 1rem;
+}
+
+.about .content p {
+    padding: 1rem 0;
+    font-size: 1.4rem;
+    color: var(--light-color);
+    line-height: 2;
+}
+
+
+
+
+
 
 
 
