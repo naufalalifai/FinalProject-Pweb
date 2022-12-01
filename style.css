@@ -187,85 +187,94 @@ section {
     line-height: 2;
 }
 
-.doctors{
-    background-color: var(--light-bg);
+.doctors {
+    background-color: var(--white);
 }
 
-.doctors .box-container{
+.doctors .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 3rem;
 }
 
-.doctors .box-container .box{
+.doctors .box-container .box {
+    background-color: var(--light-green);
+    text-align: center;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+}
+
+.doctors .box-container .box img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+
+.doctors .box-container .box h3 {
+    font-size: 2rem;
+    color: var(--white);
+    gap: 3rem;
+    padding-top: 2rem;
+    text-transform: none;
+}
+
+.doctors .box-container .box span {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.reviews {
+    background-color: var(--light-bg);
+}
+
+.reviews .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+}
+
+.reviews .box-container .box {
     background-color: var(--white);
     text-align: center;
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
     padding: 2rem;
 }
-.doctors .box-container .box img{
+
+.reviews .box-container .box img {
     height: 10rem;
     width: 10rem;
     border-radius: 50%;
 }
 
-.doctors .box-container .box h3{
+.reviews .box-container .box h3 {
     font-size: 2rem;
     color: var(--dark-green);
-    gap: 3rem;
 }
-.doctors .box-container .box span{
+
+.reviews .box-container .box span {
     font-size: 1.5rem;
     color: var(--light-color);
 }
 
-.reviews{
-    background-color: var(--light-bg);
-}
-
-.reviews .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap: 3rem;
-}
-
-.reviews .box-container .box{
-    background-color: var(--white);
-    text-align: center;
-    border-radius: .5rem;
-    box-shadow: var(--box-shadow);
-    padding: 2rem;
-}
-.reviews .box-container .box img{
-    height: 10rem;
-    width: 10rem;
-    border-radius: 50%;
-}
-
-.reviews .box-container .box h3{
-    font-size: 2rem;
-    color: var(--dark-green);
-}
-.reviews .box-container .box span{
-    font-size: 1.5rem;
-    color: var(--light-color);
-}
-.reviews .box-container .box p{
+.reviews .box-container .box p {
     padding: 2rem 0;
     line-height: 2;
     font-size: 1.5rem;
     color: var(--light-color);
     margin-bottom: 0;
 }
-.reviews .box-container .box .stars{
+
+.reviews .box-container .box .stars {
     padding: .5rem 1.5rem;
     border-radius: .5rem;
     background-color: var(--light-bg);
     margin-bottom: 1rem;
     display: inline-block;
 }
-.reviews .box-container .box .stars i{
+
+.reviews .box-container .box .stars i {
     font-size: 1.5rem;
     color: var(--light-green);
 }
