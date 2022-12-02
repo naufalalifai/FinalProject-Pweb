@@ -11,7 +11,7 @@ This is a simple website allows the user to make an appointment with the Clinic 
 
 - Visitors can see information about the clinic
 - Visitors make appointment
-- Admin can see appointment made by visitor (optional)
+- Admin can see appointment made by visitor
 
 ## Tech
 
