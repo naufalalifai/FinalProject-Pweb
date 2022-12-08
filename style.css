@@ -279,6 +279,40 @@ section {
     color: var(--light-green);
 }
 
+.contact form {
+    border-radius: .5rem;
+    background-color: var(--light-bg);
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 50rem;
+}
+
+.contact form .message {
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    background-color: var(--light-green);
+    padding: 1.2rem 1rem;
+    font-size: 1.7rem;
+    color: var(--white);
+    text-align: center;
+}
+
+.contact form .box {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border-radius: .5rem;
+    background-color: var(--white);
+    padding: 1.2rem 1.4rem;
+    font-size: 1.7rem;
+    color: var(--dark-green);
+    text-transform: none;
+}
+
+.contact form span {
+    font-size: 1.7rem;
+    color: var(--dark-green);
+}
 
 
 

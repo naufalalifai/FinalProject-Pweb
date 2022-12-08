@@ -1,3 +1,26 @@
+<?php
+
+$conn = mysqli_connect('localhost', 'root', '', 'klinikfp') or die('connection failed');
+
+if (isset($_POST['submit'])) {
+
+  $name = mysqli_real_escape_string($conn, $_POST['name']);
+  $email = mysqli_real_escape_string($conn, $_POST['email']);
+  $number = $_POST['number'];
+  $date = $_POST['date'];
+  $doctor = mysqli_real_escape_string($conn, $_POST['doctor']);
+
+  $insert = mysqli_query($conn, "INSERT INTO `appointment`(name, email, number, date, doctor) VALUES('$name','$email','$number','$date','$doctor')") or die('query failed');
+
+  if ($insert) {
+    $message[] = 'appointment made successfully!';
+  } else {
+    $message[] = 'appointment failed';
+  }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +37,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
 
   <!-- css file link  -->
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
 </head>
 
 <body>
@@ -210,6 +234,47 @@
       </div>
 
     </div>
+
+  </section>
+
+  <section class="contact" id="contact">
+
+    <h1 class="heading">make appointment</h1>
+
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+      <?php
+      if (isset($message)) {
+        foreach ($message as $message) {
+          echo '<p class="message">' . $message . '</p>';
+        }
+      }
+      ?>
+      <span>your name :</span>
+      <input type="text" name="name" placeholder="enter your name" class="box" required>
+      <span>your email :</span>
+      <input type="email" name="email" placeholder="enter your email" class="box" required>
+      <span>your number :</span>
+      <input type="number" name="number" placeholder="enter your number" class="box" required>
+      <span>appointment date :</span>
+      <input type="datetime-local" name="date" class="box" required>
+      <span>doctor :</span>
+      <select name="doctor" class=box>
+        <?php
+        $query    = mysqli_query($conn, "SELECT * FROM doctor");
+        while ($data = mysqli_fetch_array($query)) {
+        ?>
+          <option value="<?= $data['name']; ?>"><?php echo $data['name']; ?></option>
+        <?php
+        }
+        ?>
+      </select>
+      <input type="submit" value="make appointment" name="submit" class="link-btn">
+      <script>
+        if (window.history.replaceState) {
+          window.history.replaceState(null, null, window.location.href);
+        }
+      </script>
+    </form>
 
   </section>
 
