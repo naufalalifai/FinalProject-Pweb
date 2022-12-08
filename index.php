@@ -48,18 +48,19 @@ if (isset($_POST['submit'])) {
 
       <div class="row align-items-center justify-content-between">
 
-        <a href="#home" class="logo">Klinik<span>NARRAYA</span></a>
+        <a href="index.php#home" class="logo">Klinik<span>NARRAYA</span></a>
 
         <nav class="nav">
-          <a href="#home">home</a>
-          <a href="#about">about us</a>
-          <a href="#services">services</a>
-          <a href="#doctors">doctors</a>
-          <a href="#gallery">gallery</a>
-          <a href="#reviews">reviews</a>
+          <a href="index.php#home">home</a>
+          <a href="index.php#about">about us</a>
+          <a href="index.php#services">services</a>
+          <a href="index.php#doctors">doctors</a>
+          <a href="index.php#gallery">gallery</a>
+          <a href="index.php#reviews">reviews</a>
+          <a href="seeappointment.php">my appointment</a>
         </nav>
 
-        <a href="#contact" class="link-btn">make appointment</a>
+        <a href="index.php#contact" class="link-btn">make appointment</a>
 
         <div id="menu-btn" class="fas fa-bars"></div>
 
