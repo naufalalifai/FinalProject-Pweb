@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect('localhost', 'root', '', 'klinikfp') or die('connection failed');
+include 'config.php';
 
 if (isset($_POST['submit'])) {
 
