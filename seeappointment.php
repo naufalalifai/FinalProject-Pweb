@@ -27,7 +27,7 @@ if (isset($_POST['cancel'])) {
 
     <!-- css file link  -->
 
-    <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
 </head>
 
 <body>
@@ -89,7 +89,7 @@ if (isset($_POST['cancel'])) {
 
 
     <!-- custom js file link  -->
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

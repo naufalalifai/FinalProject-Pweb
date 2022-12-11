@@ -2,6 +2,14 @@
 
 include 'config.php';
 
+session_start();
+
+$user_id = $_SESSION['user_id'];
+
+if (!isset($user_id)) {
+  header('location:login.php');
+}
+
 if (isset($_POST['submit'])) {
 
   $name = mysqli_real_escape_string($conn, $_POST['name']);
@@ -38,7 +46,7 @@ if (isset($_POST['submit'])) {
 
   <!-- css file link  -->
 
-  <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
 </head>
 
 <body>
@@ -270,17 +278,12 @@ if (isset($_POST['submit'])) {
         ?>
       </select>
       <input type="submit" value="make appointment" name="submit" class="link-btn">
-      <script>
-        if (window.history.replaceState) {
-          window.history.replaceState(null, null, window.location.href);
-        }
-      </script>
     </form>
 
   </section>
 
   <!-- custom js file link  -->
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
