@@ -62,6 +62,15 @@ section {
     font-size: 4rem;
 }
 
+.empty {
+    padding: 1.5rem;
+    text-align: center;
+    border: var(--border);
+    background-color: var(--white);
+    color: var(--red);
+    font-size: 1.75rem;
+}
+
 .message {
     position: sticky;
     top: 0;
@@ -257,6 +266,48 @@ section {
     border: var(--border);
 }
 
+.appointments .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.appointments .box-container .box {
+    background-color: var(--white);
+    padding: 2rem;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+}
+
+.appointments .box-container .box p {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--light-color);
+}
+
+.appointments .box-container .box p span {
+    color: var(--purple);
+}
+
+.appointments .box-container .box form {
+    text-align: center;
+}
+
+.appointments .box-container .box form select {
+    border-radius: .5rem;
+    margin: .5rem 0;
+    width: 100%;
+    background-color: var(--light-bg);
+    border: var(--border);
+    padding: 1.2rem 1.4rem;
+    font-size: 1.8rem;
+    color: var(--black);
+}
 
 
 

@@ -55,7 +55,7 @@ if (!isset($admin_id)) {
                 $number_of_appointment = mysqli_num_rows($select_appointments);
                 ?>
                 <h3><?php echo $number_of_appointment; ?></h3>
-                <p>appointment made</p>
+                <p>total appointment</p>
             </div>
 
             <div class="box">
