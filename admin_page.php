@@ -34,6 +34,51 @@ if (!isset($admin_id)) {
     <?php include 'admin_header.php'; ?>
 
 
+    <section class="dashboard">
+
+        <h1 class="title">dashboard</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <?php
+                $select_waiting = mysqli_query($conn, "SELECT status FROM `appointment` WHERE status = 'waiting'") or die('query failed');
+                $number_of_waitings = mysqli_num_rows($select_waiting);
+                ?>
+                <h3><?php echo $number_of_waitings; ?></h3>
+                <p>appointment waitlist</p>
+            </div>
+
+            <div class="box">
+                <?php
+                $select_appointments = mysqli_query($conn, "SELECT * FROM `appointment`") or die('query failed');
+                $number_of_appointment = mysqli_num_rows($select_appointments);
+                ?>
+                <h3><?php echo $number_of_appointment; ?></h3>
+                <p>appointment made</p>
+            </div>
+
+            <div class="box">
+                <?php
+                $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE user_type = 'user'") or die('query failed');
+                $number_of_users = mysqli_num_rows($select_users);
+                ?>
+                <h3><?php echo $number_of_users; ?></h3>
+                <p>normal users</p>
+            </div>
+
+            <div class="box">
+                <?php
+                $select_admins = mysqli_query($conn, "SELECT * FROM `users` WHERE user_type = 'admin'") or die('query failed');
+                $number_of_admins = mysqli_num_rows($select_admins);
+                ?>
+                <h3><?php echo $number_of_admins; ?></h3>
+                <p>admin users</p>
+            </div>
+
+        </div>
+
+    </section>
 
 
 

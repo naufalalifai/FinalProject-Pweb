@@ -54,6 +54,14 @@ section {
     padding: 3rem 2rem;
 }
 
+.title {
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: var(--dark-green);
+    font-size: 4rem;
+}
+
 .message {
     position: sticky;
     top: 0;
@@ -160,22 +168,22 @@ section {
 .header .flex .navbar a {
     margin: 0 1rem;
     font-size: 2rem;
-    color: var(--black);
+    color: var(--dark-green);
 }
 
 .header .flex .navbar a:hover {
-    color: var(--purple);
+    color: var(--light-green);
 }
 
 .header .flex .icons div {
     margin-left: 1.5rem;
     font-size: 2.5rem;
     cursor: pointer;
-    color: var(--black);
+    color: var(--dark-green);
 }
 
 .header .flex .icons div:hover {
-    color: var(--purple);
+    color: var(--light-green);
 }
 
 .header .flex .account-box {
@@ -205,7 +213,7 @@ section {
 }
 
 .header .flex .account-box p span {
-    color: var(--purple);
+    color: var(--light-green);
 }
 
 .header .flex .account-box .delete-btn {
@@ -216,6 +224,38 @@ section {
     display: none;
 }
 
+.dashboard .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.dashboard .box-container .box {
+    border-radius: .5rem;
+    padding: 2rem;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    text-align: center;
+}
+
+.dashboard .box-container .box h3 {
+    font-size: 5rem;
+    color: var(--dark-green);
+}
+
+.dashboard .box-container .box p {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--light-bg);
+    color: var(--light-green);
+    font-size: 2rem;
+    border-radius: .5rem;
+    border: var(--border);
+}
 
 
 
@@ -278,6 +318,10 @@ section {
 
     html {
         font-size: 50%;
+    }
+
+    .title {
+        font-size: 3rem;
     }
 
 }
