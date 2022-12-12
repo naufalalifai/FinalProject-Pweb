@@ -31,6 +31,23 @@ if (!isset($admin_id)) {
 
 <body>
 
+    <?php include 'admin_header.php'; ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- custom admin js file link  -->
+    <script src="js/admin_script.js"></script>
+
 </body>
 
 </html>

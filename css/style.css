@@ -4,6 +4,8 @@
     --light-green: #7D8F69;
     --dark-green: #557153;
     --white: #fff;
+    --red: #c0392b;
+    --black: #333;
     --light-color: #666;
     --light-bg: #eee;
     --border: .2rem solid rgba(0, 0, 0, .1);
@@ -17,7 +19,7 @@
     box-sizing: border-box;
     outline: none;
     border: none;
-    text-decoration: none !important;
+    text-decoration: none;
     text-transform: capitalize;
 }
 
@@ -107,7 +109,7 @@ section {
 }
 
 .home {
-    background: url(images/home-bg.jpg) no-repeat;
+    background: url(../images/home-bg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -393,15 +395,28 @@ section {
     text-transform: capitalize;
 }
 
+.btn:hover,
+.option-btn:hover {
+    background-color: var(--dark-green);
+}
+
+.delete-btn:hover {
+    background-color: var(--black);
+}
+
 .white-btn,
-.btn {
+.btn,
+.option-btn {
     background-color: var(--light-green);
 }
 
-.btn:hover,
-.option-btn:hover,
-.delete-btn:hover {
-    background-color: var(--dark-green);
+.delete-btn {
+    background-color: var(--red);
+}
+
+.white-btn:hover {
+    background-color: var(--white);
+    color: var(--dark-green);
 }
 
 .form-container {
