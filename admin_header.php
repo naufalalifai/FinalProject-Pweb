@@ -21,6 +21,7 @@ if (isset($message)) {
             <a href="admin_page.php">home</a>
             <a href="admin_appointment.php">appointments</a>
             <a href="admin_users.php">users</a>
+            <a href="admin_register.php">register admin</a>
         </nav>
 
         <div class="icons">
