@@ -63,6 +63,7 @@ if (isset($_POST['submit'])) {
     <div class="form-container">
 
         <form action="" method="post">
+            <a href="index.php" class="logo">Klinik<span>NARRAYA</span></a>
             <h3>register</h3>
             <input type="text" name="name" placeholder="enter your name" required class="box">
             <input type="email" name="email" placeholder="enter your email" required class="box">

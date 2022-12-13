@@ -21,6 +21,7 @@
     border: none;
     text-decoration: none;
     text-transform: capitalize;
+    transition: all .2s linear;
 }
 
 *::-webkit-scrollbar {
@@ -47,6 +48,89 @@ section {
     padding: 7rem 2rem;
 }
 
+.empty {
+    padding: 1.5rem;
+    text-align: center;
+    border: var(--border);
+    background-color: var(--white);
+    color: var(--red);
+    font-size: 1.75rem;
+}
+
+.message {
+    position: sticky;
+    top: 0;
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: var(--white);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+    gap: 1.5rem;
+}
+
+.message span {
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.message i {
+    cursor: pointer;
+    color: var(--red);
+    font-size: 2.5rem;
+}
+
+.message i:hover {
+    transform: rotate(90deg);
+}
+
+.btn,
+.option-btn,
+.delete-btn,
+.white-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    color: var(--white);
+    font-size: 1.8rem;
+    border-radius: .5rem;
+    text-transform: capitalize;
+}
+
+.btn:hover,
+.option-btn:hover {
+    background-color: var(--dark-green);
+}
+
+.delete-btn:hover {
+    background-color: var(--black);
+}
+
+.white-btn,
+.btn,
+.option-btn {
+    background-color: var(--light-green);
+}
+
+.delete-btn {
+    background-color: var(--red);
+}
+
+.white-btn:hover {
+    background-color: var(--white);
+    color: var(--dark-green);
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(1rem);
+        opacity: .2s;
+    }
+}
+
 .heading {
     text-align: center;
     font-size: 4rem;
@@ -69,6 +153,7 @@ section {
 .link-btn:hover {
     background-color: var(--dark-green);
     color: var(--white);
+    text-decoration: none;
 }
 
 .header {
@@ -87,6 +172,10 @@ section {
     color: var(--dark-green);
 }
 
+.header .logo:hover {
+    text-decoration: none;
+}
+
 .header .logo span {
     color: var(--light-green);
 }
@@ -99,12 +188,61 @@ section {
 
 .header .nav a:hover {
     color: var(--light-green);
+    text-decoration: none;
+
+}
+
+.header .account-box {
+    position: absolute;
+    top: 120%;
+    right: 2rem;
+    width: 30rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    padding: 2rem;
+    text-align: center;
+    border-radius: .5rem;
+    border: var(--border);
+    background-color: var(--white);
+    display: none;
+    animation: fadeIn .2s linear;
+}
+
+.header .account-box.active {
+    display: inline-block;
+}
+
+.header .account-box p {
+    font-size: 1.75rem;
+    color: var(--light-color);
+    margin-bottom: 1.5rem;
+}
+
+.header .account-box p span {
+    color: var(--light-green);
+    text-transform: lowercase;
+}
+
+.header .account-box .delete-btn {
+    margin-top: 0;
+}
+
+#user-btn {
+    margin-left: 1.5rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--dark-green);
+}
+
+#user-btn:hover {
+    color: var(--light-green);
 }
 
 #menu-btn {
+    margin-left: 1.5rem;
     font-size: 2.5rem;
-    color: var(--dark-green);
     cursor: pointer;
+    color: var(--dark-green);
     display: none;
 }
 
@@ -343,80 +481,17 @@ section {
 .appointment .box-container .box p {
     line-height: 1.5;
     padding-top: .5rem;
-    font-size: 1.8rem;
-    color: var(--dark-green);
+    font-size: 1.7rem;
+    color: var(--light-color);
 }
 
 .appointment .box-container .box p span {
-    color: var(--dark-green);
+    color: var(--light-green);
     text-transform: none;
 }
 
-.message {
-    position: sticky;
-    top: 0;
-    margin: 0 auto;
-    max-width: 1200px;
-    background-color: var(--white);
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 10000;
-    gap: 1.5rem;
-}
-
-.message span {
-    font-size: 2rem;
-    color: var(--black);
-}
-
-.message i {
-    cursor: pointer;
-    color: var(--red);
-    font-size: 2.5rem;
-}
-
-.message i:hover {
-    transform: rotate(90deg);
-}
-
-.btn,
-.option-btn,
-.delete-btn,
-.white-btn {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 1rem 3rem;
-    cursor: pointer;
-    color: var(--white);
-    font-size: 1.8rem;
-    border-radius: .5rem;
-    text-transform: capitalize;
-}
-
-.btn:hover,
-.option-btn:hover {
-    background-color: var(--dark-green);
-}
-
-.delete-btn:hover {
-    background-color: var(--black);
-}
-
-.white-btn,
-.btn,
-.option-btn {
-    background-color: var(--light-green);
-}
-
-.delete-btn {
-    background-color: var(--red);
-}
-
-.white-btn:hover {
-    background-color: var(--white);
-    color: var(--dark-green);
+.appointment .box-container .box form {
+    text-align: center;
 }
 
 .form-container {
@@ -473,6 +548,18 @@ section {
     text-decoration: underline;
 }
 
+.form-container form .logo {
+    font-size: 2rem;
+    color: var(--dark-green);
+}
+
+.form-container form .logo:hover {
+    text-decoration: none;
+}
+
+.form-container form .logo span {
+    color: var(--light-green);
+}
 
 
 

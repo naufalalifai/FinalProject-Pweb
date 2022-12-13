@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
             $_SESSION['user_name'] = $row['name'];
             $_SESSION['user_email'] = $row['email'];
             $_SESSION['user_id'] = $row['id'];
-            header('location:index.php');
+            header('location:logged_index.php');
         }
     } else {
         $message[] = 'incorrect email or password!';
@@ -68,9 +68,13 @@ if (isset($_POST['submit'])) {
     }
     ?>
 
+
     <div class="form-container">
 
+
+
         <form action="" method="post">
+            <a href="index.php" class="logo">Klinik<span>NARRAYA</span></a>
             <h3>login</h3>
             <input type="email" name="email" placeholder="enter your email" required class="box">
             <input type="password" name="password" placeholder="enter your password" required class="box">
