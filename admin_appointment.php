@@ -68,7 +68,7 @@ if (isset($_GET['delete'])) {
                             <input type="hidden" name="appointment_id" value="<?php echo $fetch_appointments['id']; ?>">
                             <select name="update_status">
                                 <option value="" selected disabled><?php echo $fetch_appointments['status']; ?></option>
-                                <option value="pending">waiting</option>
+                                <option value="scheduled">scheduled</option>
                                 <option value="done">done</option>
                             </select>
                             <input type="submit" value="update" name="update_appointment" class="option-btn">

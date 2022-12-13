@@ -42,11 +42,11 @@ if (!isset($admin_id)) {
 
             <div class="box">
                 <?php
-                $select_waiting = mysqli_query($conn, "SELECT status FROM `appointment` WHERE status = 'waiting'") or die('query failed');
-                $number_of_waitings = mysqli_num_rows($select_waiting);
+                $select_scheduled = mysqli_query($conn, "SELECT status FROM `appointment` WHERE status = 'scheduled'") or die('query failed');
+                $number_of_scheduled = mysqli_num_rows($select_scheduled);
                 ?>
-                <h3><?php echo $number_of_waitings; ?></h3>
-                <p>appointment waitlist</p>
+                <h3><?php echo $number_of_scheduled; ?></h3>
+                <p>scheduled appointment</p>
             </div>
 
             <div class="box">
