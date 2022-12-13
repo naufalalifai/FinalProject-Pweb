@@ -11,7 +11,7 @@ This is a simple website allows the user to make an appointment with the Clinic 
 
 - Visitors can see information about the clinic
 - Users make and see their appointment
-- Admin can see appointment made by user
+- Admin can see and update appointment made by user
 
 ## Tech
 
@@ -20,3 +20,4 @@ This website is developed using:
 - Javascript
 - CSS
 - HTML
+- PHP
