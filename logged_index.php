@@ -305,6 +305,41 @@ if (isset($_POST['submit'])) {
 
     </section>
 
+    <section class="footer">
+
+        <div class="box-container container">
+
+            <div class="box">
+                <h3>contact info</h3>
+                <p> <i class="fas fa-phone"></i> (0271) 999999 </p>
+                <p> <i class="fab fa-whatsapp"></i> 081999999999 </p>
+                <p> <i class="fas fa-envelope"></i> clinicnarraya@gmail.com </p>
+                <p> <i class="fas fa-map-marker-alt"></i> solo, indonesia - 57155 </p>
+            </div>
+
+
+            <div class="box">
+
+                <h3>opening hours</h3>
+                <p> <i class="fas fa-clock"></i> 10:00am to 18:00pm </p>
+            </div>
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+                <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+                <a href="#"> <i class="fab fa-youtube"></i> youtube </a>
+            </div>
+
+        </div>
+
+        <div class="credit"> &copy; copyright @
+            <?php echo date('Y'); ?> by <span>Naufal Alif</span>
+        </div>
+
+    </section>
+
     <!-- custom js file link  -->
     <script src="js/script.js"></script>
 </body>

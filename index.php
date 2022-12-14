@@ -35,7 +35,7 @@
                     <a href="index.php#gallery">gallery</a>
                     <a href="index.php#reviews">reviews</a>
                 </nav>
-                <a href="login.php" class="link-btn">make appointment</a>
+                <a href="index.php#contact" class="link-btn">make appointment</a>
 
                 <div id="menu-btn" class="fas fa-bars"></div>
 
@@ -54,7 +54,7 @@
                     <h3>the beginning of your healthy life</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium itaque, quasi aliquam alias
                         tempora voluptatibus.</p>
-                    <a href="login.php" class="link-btn">make appointment</a>
+                    <a href="index.php#contact" class="link-btn">make appointment</a>
                 </div>
             </div>
 
@@ -209,6 +209,51 @@
                 <span>Satisfied Customers</span>
             </div>
 
+        </div>
+
+    </section>
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading">make appointment</h1>
+        <div class="content text-center">
+            <a href="login.php" class="link-btn">login here</a>
+        </div>
+
+
+    </section>
+
+    <section class="footer">
+
+        <div class="box-container container">
+
+            <div class="box">
+                <h3>contact info</h3>
+                <p> <i class="fas fa-phone"></i> (0271) 999999 </p>
+                <p> <i class="fab fa-whatsapp"></i> 081999999999 </p>
+                <p> <i class="fas fa-envelope"></i> clinicnarraya@gmail.com </p>
+                <p> <i class="fas fa-map-marker-alt"></i> solo, indonesia - 57155 </p>
+            </div>
+
+
+            <div class="box">
+
+                <h3>opening hours</h3>
+                <p> <i class="fas fa-clock"></i> 10:00am to 18:00pm </p>
+            </div>
+
+            <div class="box">
+                <h3>follow us</h3>
+                <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+                <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+                <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+                <a href="#"> <i class="fab fa-youtube"></i> youtube </a>
+            </div>
+
+        </div>
+
+        <div class="credit"> &copy; copyright @
+            <?php echo date('Y'); ?> by <span>Naufal Alif</span>
         </div>
 
     </section>
