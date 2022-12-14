@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
 
     <!-- css file link  -->
-
     <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
 </head>
 
@@ -32,7 +31,6 @@
                     <a href="index.php#about">about us</a>
                     <a href="index.php#services">services</a>
                     <a href="index.php#doctors">doctors</a>
-                    <a href="index.php#gallery">gallery</a>
                     <a href="index.php#reviews">reviews</a>
                 </nav>
                 <a href="index.php#contact" class="link-btn">make appointment</a>
@@ -231,7 +229,7 @@
                 <h3>contact info</h3>
                 <p> <i class="fas fa-phone"></i> (0271) 999999 </p>
                 <p> <i class="fab fa-whatsapp"></i> 081999999999 </p>
-                <p> <i class="fas fa-envelope"></i> clinicnarraya@gmail.com </p>
+                <p> <i class="fas fa-envelope"></i> kliniknarraya@gmail.com </p>
                 <p> <i class="fas fa-map-marker-alt"></i> solo, indonesia - 57155 </p>
             </div>
 

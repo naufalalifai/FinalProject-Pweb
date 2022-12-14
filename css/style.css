@@ -497,11 +497,11 @@ section {
 
 .footer .credit {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.3rem;
     color: var(--light-color);
     border-top: var(--border);
     margin-top: 2.5rem;
-    padding-top: 3.5rem;
+    padding-top: 2.5rem;
 }
 
 .footer .credit span {
