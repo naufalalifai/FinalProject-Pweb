@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 08, 2022 at 03:08 PM
+-- Generation Time: Dec 14, 2022 at 03:29 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -29,20 +29,14 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `appointment` (
   `id` int(100) NOT NULL,
+  `user_id` int(100) NOT NULL,
   `name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `number` varchar(15) NOT NULL,
   `date` datetime NOT NULL,
-  `doctor` varchar(100) NOT NULL
+  `doctor` varchar(100) NOT NULL,
+  `status` varchar(20) NOT NULL DEFAULT 'scheduled'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `appointment`
---
-
-INSERT INTO `appointment` (`id`, `name`, `email`, `number`, `date`, `doctor`) VALUES
-(1, 'nlifai', 'alif@gmail.com', '12324234432', '2022-12-22 20:00:00', 'dr. Christie Amanda, Sp.KK'),
-(2, 'sds', 'sds@fesf.com', '1355654756756', '2022-12-31 10:00:00', 'dr. Melinda McDoug, Sp.A');
 
 -- --------------------------------------------------------
 
@@ -64,6 +58,28 @@ INSERT INTO `doctor` (`id`, `name`) VALUES
 (2, 'dr. Christie Amanda, Sp.KK'),
 (3, 'dr. Melinda McDoug, Sp.A');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(100) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `user_type` varchar(20) NOT NULL DEFAULT 'user'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `user_type`) VALUES
+(1, 'alif', 'alif@gmail.com', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'user'),
+(2, 'admin', 'admin@gmail.com', 'd8578edf8458ce06fbc5bb76a58c5ca4', 'admin');
+
 --
 -- Indexes for dumped tables
 --
@@ -75,6 +91,12 @@ ALTER TABLE `appointment`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -82,6 +104,12 @@ ALTER TABLE `appointment`
 -- AUTO_INCREMENT for table `appointment`
 --
 ALTER TABLE `appointment`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
