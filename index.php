@@ -12,6 +12,9 @@
 
     <!-- bootstrap cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- css file link  -->
     <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
@@ -32,6 +35,7 @@
                     <a href="index.php#services">services</a>
                     <a href="index.php#doctors">doctors</a>
                     <a href="index.php#reviews">reviews</a>
+                    <a href="index.php#gallery">gallery</a>
                 </nav>
                 <a href="index.php#contact" class="link-btn">make appointment</a>
 
@@ -211,6 +215,44 @@
 
     </section>
 
+    <section class="gallery" id="gallery">
+        <div id="img" class="carousel slide" data-ride="carousel">
+
+            <ul class="carousel-indicators">
+                <li data-target="#img" data-slide-to="0" class="active"></li>
+                <li data-target="#img" data-slide-to="1"></li>
+                <li data-target="#img" data-slide-to="2"></li>
+                <li data-target="#img" data-slide-to="3"></li>
+                <li data-target="#img" data-slide-to="4"></li>
+            </ul>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/gallery0.jpg" alt="" width="550" height="250">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/gallery1.jpg" alt="" width="550" height="250">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/gallery2.jpg" alt="" width="550" height="250">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/gallery3.jpg" alt="" width="550" height="250">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/gallery4.jpg" alt="" width="550" height="250">
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#img" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#img" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </section>
+
     <section class="contact" id="contact">
 
         <h1 class="heading">make appointment</h1>
@@ -220,6 +262,8 @@
 
 
     </section>
+
+
 
     <section class="footer">
 

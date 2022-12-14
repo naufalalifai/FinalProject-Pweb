@@ -66,6 +66,7 @@ if (isset($_GET['delete'])) {
                     <a href="logged_index.php#services">services</a>
                     <a href="logged_index.php#doctors">doctors</a>
                     <a href="logged_index.php#reviews">reviews</a>
+                    <a href="logged_index.php#gallery">gallery</a>
                     <a href="seeappointment.php">my appointment</a>
                 </nav>
 
